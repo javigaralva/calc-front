@@ -1,0 +1,124 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Execute",
+            "expression": "add()"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "button1_click"
+    },
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "GetValue",
+            "variableName": "num1",
+            "widgetName": "numericbox1"
+          },
+          {
+            "command": "GetValue",
+            "variableName": "num2",
+            "widgetName": "numericbox2"
+          },
+          {
+            "children": [
+              {
+                "command": "SetValue",
+                "expression": "\"?\"",
+                "widgetName": "numericbox3"
+              }
+            ],
+            "command": "If",
+            "expression": "IsNull(num1) && IsNull(num2)"
+          },
+          {
+            "children": [
+              {
+                "command": "SetValue",
+                "expression": "CalcApi.Add(num1, num2)",
+                "widgetName": "numericbox3"
+              }
+            ],
+            "command": "Else"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "num1",
+            "type": "decimal"
+          },
+          {
+            "name": "num2",
+            "type": "decimal"
+          }
+        ]
+      },
+      "name": "add"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "allowDecimals": true,
+        "allowNegative": true,
+        "name": "numericbox1",
+        "size": "third",
+        "widget": "NumericBox"
+      },
+      {
+        "color": "default",
+        "dock": "previous",
+        "name": "label1",
+        "text": "+",
+        "widget": "Label"
+      },
+      {
+        "allowDecimals": true,
+        "allowNegative": true,
+        "name": "numericbox2",
+        "size": "third",
+        "widget": "NumericBox"
+      },
+      {
+        "color": "primary",
+        "dock": "previous",
+        "name": "button1",
+        "text": "=",
+        "widget": "Button"
+      },
+      {
+        "name": "numericbox3",
+        "readOnly": true,
+        "size": "third",
+        "widget": "NumericBox"
+      }
+    ],
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
+    "horizontalSeparation": "large",
+    "layout": "container",
+    "verticalSeparation": "large"
+  },
+  "routing": {
+    "path": "/home"
+  },
+  "unused": [
+    {
+      "__internalName": "label2",
+      "color": "default",
+      "dock": "previous",
+      "name": "label2",
+      "text": "=",
+      "widget": "Label"
+    }
+  ]
+}

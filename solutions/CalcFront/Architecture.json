@@ -11,11 +11,21 @@
       "type": "WebFrontend",
       "x": 350,
       "y": 247
+    },
+    {
+      "name": "CalcMobile",
+      "type": "MobileApp",
+      "x": 389,
+      "y": 98
     }
   ],
   "references": [
     {
       "fromSystemName": "CalcFront",
+      "toSystemName": "CalcApi"
+    },
+    {
+      "fromSystemName": "CalcMobile",
       "toSystemName": "CalcApi"
     }
   ]
