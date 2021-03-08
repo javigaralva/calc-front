@@ -16,11 +16,11 @@
         "command": "Launch",
         "expressionCulture": "^culture",
         "expressionIcon": "\"logo.svg\"",
-        "expressionMainMenu": "^menu",
+        "expressionMainMenu": "null",
         "expressionSubTitle": "null",
-        "expressionTitle": "\"CalcMobile\"",
+        "expressionTitle": "null",
         "expressionToolsMenu": "null",
-        "search": "enable",
+        "search": "disable",
         "uiComponentName": "CmpHome"
       }
     ],
