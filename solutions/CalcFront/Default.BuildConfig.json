@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "systemName": "CalcFront",
+      "action": "build",
+      "buildPort": 7777
+    },
+    {
+      "systemName": "CalMs",
+      "action": "omit"
+    },
+    {
+      "systemName": "CalcApi",
+      "action": "connect",
+      "connectionData": {
+        "url": "http://localhost:8080"
+      }
+    }
+  ]
+}
